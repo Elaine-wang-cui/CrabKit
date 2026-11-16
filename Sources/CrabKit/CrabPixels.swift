@@ -18,11 +18,7 @@ public struct CrabFrame: Sendable {
 public enum CrabPalette {
     public static func color(_ ch: Character) -> Color? {
         switch ch {
-        case "r": Color(red: 214/255, green: 122/255, blue: 92/255)
-        case "d": Color(red: 186/255, green: 98/255, blue: 70/255)
-        case "k": Color(red: 38/255, green: 26/255, blue: 22/255)
-        case "p": Color(red: 240/255, green: 150/255, blue: 150/255)
-        // 爱心钳子那只
+        // 爱心钳子
         case "O": Color(red: 92/255, green: 38/255, blue: 30/255)
         case "R": Color(red: 240/255, green: 118/255, blue: 90/255)
         case "H": Color(red: 255/255, green: 178/255, blue: 150/255)
@@ -55,7 +51,7 @@ public struct PixelCrab: View {
         self.flipped = flipped
     }
 
-    private static let inks: [Character] = ["r", "d", "p", "k", "O", "R", "H", "D", "K", "W", "P", "S", "f", "y", "g", "L", "T"]
+    private static let inks: [Character] = ["O", "R", "H", "D", "K", "W", "P", "S", "f", "y", "g", "L", "T"]
 
     public var body: some View {
         let cols = (frame.rows.first?.count ?? 0) + 2

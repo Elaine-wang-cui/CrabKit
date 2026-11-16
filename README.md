@@ -81,6 +81,13 @@ struct ChatScreen: View {
 
 系统规定：自己的 app 在前台时灵动岛不显示，切到别的 app 或回桌面才看得见。
 
+## 聊天页（CrabChat）
+
+`CrabChat` 是单独的一个库，依赖 `CrabKit`。里面是聊天页、输入框，以及发送时那颗气泡飞到消息列表的动画。
+回复在本地按固定节奏写出来，对话只留在内存里，也不写入小组件的共享存储。没有账号、没有网络、没有数据库。
+
+演示界面是 `ChatPlayground()`，或者 `CrabDemo` 里的 `CrabDemoScreen()`（聊天和螃蟹各一页）。
+
 ## 文件在哪
 
 - `Sources/CrabKit/Sprites/`：爱心钳子小螃蟹的像素帧（每个字符一个像素，`.` 透明，字母查 `CrabPalette`）
@@ -92,6 +99,7 @@ struct ChatScreen: View {
 - `Sources/CrabKit/CrabSnapshot.swift`：给桌面小组件的数据
 - `Sources/CrabKit/MockReplyEngine.swift`、`CrabPlayground.swift`：不联网的演示
 - `Sources/CrabKitWidgets/`：灵动岛、锁屏、桌面小组件的界面
+- `Sources/CrabChat/`：聊天页、输入框、发送气泡的飞行、内存里的假回复
 - `Examples/CrabDemo/`：演示 app 和小组件扩展的入口
 - `docs/images/`：姿势表
 
