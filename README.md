@@ -40,7 +40,7 @@
 ### 跑一个演示 app
 
 1. Xcode → File → New → Project → iOS App（界面选 SwiftUI），随便起个名字。
-2. File → Add Package Dependencies… → Add Local…，选本目录；把 `CrabKit` 加到 app target。
+2. File → Add Package Dependencies… → Add Local…，选本目录；把 `CrabDemo` 加到 app target（它会带上 CrabKit 和 CrabChat）。在自己的 app 里只用螃蟹就加 `CrabKit`，要聊天页再加 `CrabChat`。
 3. 把自动生成的 `XXXApp.swift` 换成 `Examples/CrabDemo/CrabDemoApp.swift` 的内容。
 4. 选模拟器或你的手机，⌘R。真机要在 Signing & Capabilities 里选你自己的 Team。
 
